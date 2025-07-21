@@ -36,10 +36,31 @@ h1 {
 }
 
 .sub-text {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #cbb5f7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.2rem;
 }
+
+.role-tag {
+  background-color: #1e1130;
+  color: #f0eaff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  border: 1px solid #6c63ff40;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+.role-tag:hover {
+  transform: scale(1.05);
+  background-color: #29154a;
+}
+
 
 .hero-buttons {
   display: flex;
@@ -84,6 +105,16 @@ h1 {
   color: #c2a7f1;
   margin-bottom: 0.5rem;
 }
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  animation: fadeIn 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }

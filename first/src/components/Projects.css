@@ -1,73 +1,93 @@
 .projects-section {
-  background: linear-gradient(135deg, #1a0f2f, #2a1454);
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  color: #f5f5f5;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  color: #f0eaff;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.projects-overlay {
-  width: 100%;
-  max-width: 1000px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(160, 90, 255, 0.3);
-}
-
-.projects-heading {
+.projects-header {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  color: #d9a6ff;
-  text-shadow: 0 0 10px #a64dff;
+  margin-bottom: 3rem;
 }
 
-.project-list {
+.projects-title {
+  font-size: 2.8rem;
+  color: #6c63ff;
+  animation: pop 0.6s ease forwards;
+}
+
+.projects-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  animation: fadeIn 1.2s ease forwards;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(140, 90, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #e0d4f5;
-}
-
-.project-card h3 {
-  color: #f5e9ff;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.project-card p {
-  color: #d1c1f2;
-  font-size: 1rem;
+  background: #181818;
+  border: 2px solid #6c63ff;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: zoomIn 0.5s ease forwards;
+  opacity: 0;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(180, 110, 255, 0.4);
+  transform: scale(1.05);
+  background-color: #2f2f2f;
 }
 
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
+.project-icon {
+  font-size: 2.5rem;
+  color: #6c63ff;
+  margin-bottom: 1rem;
+}
+
+.project-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
-}
-
-.fade-in {
-  animation: fadeSlideIn 0.6s ease-out;
 }

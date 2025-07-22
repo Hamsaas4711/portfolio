@@ -21,6 +21,8 @@ function PixelLoader({ onFinish }) {
     <div className="pixel-loader-screen">
       <div className="pixel-loader-frame">
         <div className="pixel-loader-fill" style={{ width: `${progress}%` }} />
+         <div className="pixel-corner-bottom-left"></div>
+      <div className="pixel-corner-bottom-right"></div>
       </div>
       <p className="pixel-loader-text">Loading...</p>
     </div>

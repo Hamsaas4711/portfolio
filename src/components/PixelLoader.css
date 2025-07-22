@@ -13,22 +13,83 @@
 }
 
 .pixel-loader-frame {
+  position: relative;
   width: 250px;
   height: 20px;
-  border: 3px solid #b07fff;
   background-color: #1e1130;
+  border: 3px solid #b07fff;
   box-shadow: 0 0 10px #b07fff;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .pixel-loader-fill {
   height: 100%;
+  width: 0%;
   background-color: #d0aaff;
   transition: width 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Pixel-rounded corners for loader fill */
+.pixel-loader-fill::before,
+.pixel-loader-fill::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 3px;
+  height: 3px;
+  background-color: #d0aaff;
+}
+
+/* Top-left pixel corner */
+.pixel-loader-fill::before {
+  left: 0;
+  box-shadow:
+    0 1px #d0aaff,
+    1px 0 #d0aaff;
+}
+
+/* Top-right pixel corner */
+.pixel-loader-fill::after {
+  right: 0;
+  box-shadow:
+    -1px 0 #d0aaff,
+    0 1px #d0aaff;
+}
+
+/* Bottom corners */
+.pixel-loader-fill .pixel-corner-bottom-left,
+.pixel-loader-fill .pixel-corner-bottom-right {
+  position: absolute;
+  bottom: -1px;
+  width: 3px;
+  height: 3px;
+  background-color: #d0aaff;
+}
+
+.pixel-loader-fill .pixel-corner-bottom-left {
+  left: 0;
+  box-shadow:
+    0 -1px #d0aaff,
+    1px 0 #d0aaff;
+}
+
+.pixel-loader-fill .pixel-corner-bottom-right {
+  right: 0;
+  box-shadow:
+    -1px 0 #d0aaff,
+    0 -1px #d0aaff;
 }
 
 .pixel-loader-text {
   color: #f2eaff;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
+}
+
+
+@keyframes pixel-fill {
+  from { width: 0; }
+  to { width: 100%; }
 }

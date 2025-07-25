@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
-import { FaGithub, FaLinkedin, FaInstagram, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { BiCloudDownload } from "react-icons/bi";
 
 function About() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -36,7 +37,7 @@ function About() {
         
         <div className="about-sections-row">
         {/* Education Timeline */}
-        <div className="timeline-container">
+        <div className="timeline-container fade-in">
           <h2 className="timeline-title">Education</h2>
           <div className="timeline">
             {/* SSLC Milestone */}
@@ -44,7 +45,7 @@ function About() {
               <div className="circle filled"></div>
               <div className="content">
                 <h3>SSLC</h3>
-                <p>Completed with distinction</p>
+                <p>Completed in the year 2023</p>
               </div>
             </div>
             {/* Diploma Milestone */}
@@ -58,20 +59,28 @@ function About() {
           </div>
         </div>
 
-        {/* Certificate Section */}
-        <div className="education-cert-container">
-          <h2>Certificates</h2>
-          <ul className="cert-list">
-            <li>
-              <span>Data Science Certification</span>
-              <a
-                href="/data_science.pdf"
-                download="DataScienceCertificate"
-                className="download-btn"
-              >
-                <FaDownload />‎ Download
-              </a>
-            </li>
+        <div className="education-cert-container fade-in">
+  <h2>Certifications</h2>
+  <p className="cert-subtitle">A collection of my verified certifications</p>
+
+  <ul className="cert-list">
+    <li className="cert-item">
+      <div className="cert-content">
+        <div className="cert-header">
+          <span className="cert-title">Data Science Certification</span>
+          <a
+            href="/data_science.pdf"
+            download="DataScienceCertificate"
+            className="download-btn"
+          >
+            <BiCloudDownload />‎ Download
+          </a>
+        </div>
+        <p className="cert-description">
+          Hands-on training in Python, machine learning, and real-world data projects.
+        </p>
+      </div>
+    </li>
             {/* Add more certificates here */}
           </ul>
         </div>

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: #121212;
+  background: linear-gradient(to bottom, #9f77f0, #380B60);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -14,7 +14,7 @@
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #6c63ff;
+  color: #e4d1ec;
 }
 
 /* Links Container */
@@ -32,7 +32,7 @@
 }
 
 .links a:hover {
-  color: #6c63ff;
+  color: #dc91fa;
   transform: scale(1.05);
 }
 

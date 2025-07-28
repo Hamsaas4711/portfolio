@@ -24,13 +24,13 @@ function Footer() {
       {/* Social Icons */}
       <div className="socials">
         <a href="mailto:hamsaas471@gmail.com" title="hamsaas471@gmail.com" target="_blank" rel="noreferrer">
-          <MdEmail />
+          <div className='social-icons'><MdEmail /></div>
         </a>
         <a href="https://www.instagram.com/hamsaaas_17?igsh=MWVyd3g5b3BnNjQ3Mg==" title="@hamsaaas_17" target="_blank" rel="noreferrer">
-          <FaInstagram />
+          <div className='social-icons'><FaInstagram /></div>
         </a>
         <a href="https://github.com/Hamsaas4711" title="Hamsaas4711" target="_blank" rel="noreferrer">
-          <FaGithub />
+          <div className='social-icons'><FaGithub /></div>
         </a>
       </div>
     </footer>

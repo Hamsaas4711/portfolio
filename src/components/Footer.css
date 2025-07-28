@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.socail-icons{
+    color: rgb(0, 0, 0);
+}
+
 .socials a:hover {
   color: #ffffff;
   transform: translateY(-3px);

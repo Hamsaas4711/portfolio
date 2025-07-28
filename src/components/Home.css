@@ -94,6 +94,10 @@ h1 {
   box-shadow: 0 0 10px rgba(120, 60, 200, 0.2);
 }
 
+.interests-section a:hover{
+  transform: scale(1.05);
+}
+
 .interests-section h2 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
